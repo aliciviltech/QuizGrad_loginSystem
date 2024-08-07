@@ -1,0 +1,148 @@
+@font-face {
+    font-family: poppins;
+    src: url(assets/fonts/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: robboto;
+    src: url(../assets/fonts/roboto/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: robboto;
+    color: var(--primary-color);
+}
+
+:root {
+    --primary-color: #333333;
+    --secondary-color: #e6b514;
+    --tertiary-color: #9a9a9a;
+}
+
+.main {
+    max-width: 1100px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.textSide {
+    min-height: 100vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px;
+    gap: 40px;
+}
+
+.textSide .logo {
+    text-align: center;
+}
+
+.textSide .welcomeNote {
+    text-align: center;
+    line-height: 25px;
+    color: var(--primary-color);
+}
+
+.textSide input {
+    border: none;
+    outline: none;
+    margin-top: 5px;
+}
+
+.textSide input::placeholder {
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+
+.textSide .inputFields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.textSide .inputFields .inputContainer {
+    width: 100%;
+    /* height: 50px; */
+    border: 1px solid var(--tertiary-color);
+    padding: 10px 20px;
+    border-left: 4px solid var(--tertiary-color);
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.textSide .inputContainer span {
+    color: var(--tertiary-color);
+}
+
+
+.textSide .rememberMe {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.textSide .rememberMe input {
+    margin-right: 20px;
+}
+
+/* .textSide .rememberMe span {
+    width: 50%;
+} */
+.imageUpload {
+    position: relative;
+}
+
+.imageUpload #imageContainer {
+    width: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.textSide #loginBtn,
+.textSide #signUpBtn {
+    border: 1px solid var(--secondary-color);
+    padding: 10px 30px;
+    color: var(--secondary-color);
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.177);
+    font-size: 16px;
+}
+
+.textSide #signUpBtn {
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+    color: #ffffff;
+    margin-right: 30px;
+}
+
+@media screen and (max-width:1024px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 10px;
+    }
+
+    .textSide #signUpBtn {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .textSide {
+        width: 100%;
+        padding: 100px 20px;
+    }
+}

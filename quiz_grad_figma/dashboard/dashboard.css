@@ -1,0 +1,221 @@
+@font-face {
+    font-family: poppins;
+    src: url(../assets/fonts/poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: robboto;
+    src: url(../assets/fonts/roboto/Roboto-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #333333;
+    --secondary-color: #FCC822;
+    --tertiary-color: #9a9a9a;
+}
+.main{
+    max-width: 1500px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.header{
+    width: 90%;
+    margin: auto;
+    height: 60px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.177);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+.header .logo{
+    flex: 2;
+}
+.header .logo img{
+    /* width: 40px; */
+}
+.header .nav{
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: poppins;
+}
+.header .nav a{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--tertiary-color);
+}
+.header .nav #login,
+.header .nav #signUp{
+    border: 1px solid var(--secondary-color);
+    padding: 5px 20px;
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
+.header .nav #signUp{
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+    color: #ffffff;
+}
+.header .nav #signUp:hover{
+    background-color: transparent;
+    color:var(--secondary-color);
+    transition: 0.3s;
+}
+.header .nav #login:hover{
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+    color: #ffffff;
+}
+.header .nav .userName{
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.header .nav .userName .userImage{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.header .nav .userName img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.header .nav .userName .fa-caret-down{
+    color: black;
+    margin-left: 10px;
+}
+.header .nav .userMenu{
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.177);
+    width: fit-content;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    gap: 10px;
+}
+.header .nav .userMenu span:hover{
+    color: var(--secondary-color);
+}
+.header .menuBars{
+    font-size: 20px;
+    display: none;
+}
+iframe{
+    height: 100vh;
+    margin-top: 50px;
+    display: none;
+}
+@media screen and (max-width:1024px){
+    .header .nav{
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        gap: 20px;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        right: -300px;
+        background-color: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.177);
+        transition: 0.5s;
+    }
+    .header .moveNav{
+        right: 0;
+    }
+    .header .menuBars{
+        display: unset;
+    }
+}
+
+/* ==================== banner section ===================== */
+#iframeBack{
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(0, 38, 109);
+    position: fixed;
+    top: 120px;
+    left: 80px;
+    cursor: pointer;
+    display: none;
+}
+.banner{
+    width: 90%;
+    margin: auto;
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: space-between;
+    font-family: robboto;
+}
+.banner .textSide{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 100px;
+}
+.banner .textSide h1{
+    font-size: 55px;
+    color: var(--primary-color);
+}
+.banner .textSide p{
+    border-left: 2px solid var(--primary-color);
+    padding-left: 10px;
+    line-height: 30px;
+    color: var(--tertiary-color);
+}
+.banner .textSide #startSolving{
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    font-family: poppins;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.176);
+    text-decoration: none;
+}
+.banner .textSide #knowMore{
+    color: var(--secondary-color);
+    font-size: 16px;
+    margin-left: 40px;
+    border: none;
+    font-family: poppins;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+.banner .textSide #knowMore:hover{
+    border: 2px solid var(--secondary-color);
+    transition: 0.3s;
+}
+.banner .imageSide{
+    flex:5;
+}
+.banner .imageSide img{
+    width: 100%;
+}
+

@@ -1,0 +1,239 @@
+@font-face {
+    font-family: poppins;
+    src: url(assets/fonts/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: robboto;
+    src: url(assets/fonts/roboto/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #333333;
+    --secondary-color: #FCC822;
+    --tertiary-color: #9a9a9a;
+}
+
+.main {
+    max-width: 1500px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    width: 90%;
+    margin: auto;
+    height: 60px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.177);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.header .logo {
+    flex: 2;
+}
+
+.header .logo img {
+    /* width: 40px; */
+}
+
+.header .nav {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: poppins;
+}
+
+.header .nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--tertiary-color);
+}
+
+.header .nav #login,
+.header .nav #signUp {
+    border: 1px solid var(--secondary-color);
+    padding: 5px 20px;
+    color: var(--secondary-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.header .nav #signUp {
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+    color: #ffffff;
+}
+
+.header .nav #signUp:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
+
+.header .nav #login:hover {
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+    color: #ffffff;
+}
+
+.header .menuBars {
+    font-size: 20px;
+    display: none;
+}
+
+@media screen and (max-width:1024px) {
+    .header .nav {
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        gap: 20px;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        right: -300px;
+        background-color: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.177);
+        transition: 0.5s;
+    }
+
+    .header .moveNav {
+        right: 0;
+    }
+
+    .header .menuBars {
+        display: unset;
+    }
+}
+
+/* ==================== banner section ===================== */
+.banner {
+    width: 90%;
+    max-height: 100vh;
+    margin: auto;
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: space-between;
+    font-family: robboto;
+}
+
+.banner .textSide {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 100px;
+}
+
+.banner .textSide h1 {
+    font-size: 55px;
+    color: var(--primary-color);
+}
+
+.banner .textSide p {
+    border-left: 2px solid var(--primary-color);
+    padding-left: 10px;
+    line-height: 30px;
+    color: var(--tertiary-color);
+}
+
+.banner .textSide #startSolving {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    font-family: poppins;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.176);
+}
+
+.banner .textSide #knowMore {
+    color: var(--secondary-color);
+    margin-left: 40px;
+    border: none;
+    font-family: poppins;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.banner .textSide #knowMore:hover {
+    border: 2px solid var(--secondary-color);
+    transition: 0.3s;
+}
+
+.banner .imageSide {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner .imageSide img {
+    width: 100%;
+}
+
+@media screen and (max-width:1024px) {
+
+    .banner .imageSide {
+        flex: 2;
+    }
+
+    .banner .imageSide img {
+        width: 300%;
+        object-fit: cover;
+        object-position: -100px center;
+    }
+
+    .banner .textSide {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner .textSide h1 {
+        font-size: clamp(30px, 7vw, 7vw);
+    }
+}
+
+@media screen and (max-width:600px) {
+    .banner .imageSide {
+        display: none;
+    }
+
+    .banner .textSide h1 {
+        font-size: clamp(30px, 7vw, 7vw);
+    }
+
+    .banner .textSide .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .banner .textSide #startSolving {
+        font-size: clamp(14px, 3vw, 3vw);
+    }
+
+    .banner .textSide #knowMore {
+        margin: 20px 0;
+        font-size: clamp(14px, 3vw, 3vw);
+        border: 2px solid var(--secondary-color);
+    }
+
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="textSide">
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="welcomeNote">
+                <h2>Sign Up Form to create your account.</h2>
+            </div>
+            <div class="inputFields">
+                <div class="userNameInput inputContainer">
+                    <span>User Name</span>
+                    <input type="text" id="userNameInput" placeholder="Joey Tribiani">
+                </div>
+                <div class="emailInput inputContainer" >
+                    <span>Email Address</span>
+                    <input type="text" id="emailInput" placeholder="xyz@email.com">
+                </div>
+                <div class="passInput inputContainer">
+                    <span>Password</span>
+                    <input type="password" id="passInput" placeholder="************">
+                </div>
+                <div class="confirmPassInput inputContainer">
+                    <span>Confirm Password</span>
+                    <input type="password" id="confirmPassInput" placeholder="************">
+                </div>
+                <div class="imageUpload">
+                    Upload your image:
+                    <input type="file" id="imageInput">
+                    <img id="imageContainer" src="" alt="">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="signUpBtn">Sign Up</button>
+                <button id="loginBtn">Login</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="signup.js"></script>
+</body>
+
+</html>

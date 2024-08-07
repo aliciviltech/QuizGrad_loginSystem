@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="main">
+        <!-- ========== header =========== -->
+        <div class="header">
+            <div class="logo">
+                <img src="../assets/images/logo.png">
+            </div>
+            <div class="nav">
+                <a href="">How it works</a>
+                <a href="">Features</a>
+                <a href="">About Us</a>
+                <div class="loginSignUp"></div>
+                <div class="userName"></div>
+                <div class="userMenu"> <span id="logout">Logout</span> <span id="otherAccount">sigin in with other account</span> </div>
+            </div> 
+            <div class="menuBars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <!-- =========== banner ========== -->
+        <i class="fa-solid fa-arrow-left" id="iframeBack"></i>
+        <div class="banner">
+            <div class="textSide">
+                <h1>Learn <br> new concepts <br> for each question</h1>
+                <p>We help you prepare for exams and quizes </p>
+                <div class="buttons">
+                    <a id="startSolving">start solving</a>
+                    <button id="knowMore"><i class="fa-solid fa-angle-down"></i> know more</button>
+                </div>
+            </div>
+            <div class="imageSide">
+                <img src="../assets/images/landing_page_banner.png" alt="">
+            </div>
+        </div>
+
+        <iframe width="100%" height="100vh" src="./start_solving/start_solving.html" frameborder="0"></iframe>
+    </div>
+
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

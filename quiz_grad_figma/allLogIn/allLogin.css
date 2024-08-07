@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    min-height: 100vh ;
+}
+.logo{
+    
+}
+.generalContainer{
+    width: 500px;
+    height: fit-content;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.469);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding:  50px 20px;
+}
+.allLoginContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.userTag{
+    width: 70%;
+    padding: 10px 30px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+.userTag img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+}
+
+#addOther:hover{
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
